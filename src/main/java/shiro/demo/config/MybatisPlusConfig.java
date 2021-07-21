@@ -14,6 +14,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @MapperScan("shiro.demo.modles.*.mapper.*")
 public class MybatisPlusConfig {
+
+    /**
+     * 分页插件配置
+     * @return
+     */
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();
