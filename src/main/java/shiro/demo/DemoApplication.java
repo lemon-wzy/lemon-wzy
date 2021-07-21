@@ -1,5 +1,6 @@
 package shiro.demo;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author lichi
  */
 @SpringBootApplication
+@MapperScan("shiro.demo.modules.*.mapper")
 public class DemoApplication {
 
 	public static void main(String[] args) {

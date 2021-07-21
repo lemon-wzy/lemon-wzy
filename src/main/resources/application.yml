@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: 127.0.0.1:3306/llt?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/llt?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
     username: root
     password: root
 
@@ -21,4 +21,7 @@ spring:
           max-idle: 8
           min-idle: 0
 
-
+mybatis-plus:
+  configuration:
+    auto-mapping-behavior: full
+  mapper-locations: classpath*:mapper/*Mapper.xml
