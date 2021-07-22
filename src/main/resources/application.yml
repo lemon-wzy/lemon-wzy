@@ -1,5 +1,17 @@
 server:
   port: 8080
+  tomcat:
+    uri-encoding: utf-8
+  servlet:
+    context-path:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 50000MB
+
+
+#文件上传相关
+file-save-path: D:\images\
+file-save-port: 9001
 
 spring:
   datasource:
