@@ -10,8 +10,9 @@ server:
 
 
 #文件上传相关
-file-save-path: D:\images\
-file-save-port: 9001
+file:
+  save-path: D:\images\
+  save-port: 9001
 
 spring:
   datasource:

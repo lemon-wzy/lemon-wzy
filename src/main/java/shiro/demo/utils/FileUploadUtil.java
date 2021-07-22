@@ -1,6 +1,7 @@
 package shiro.demo.utils;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -18,19 +19,31 @@ import java.util.UUID;
 @Component
 public class FileUploadUtil {
 
-    private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd/");
+    public FileUploadUtil() {
+
+    }
+
+    private  SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MM/dd/");
 
     /**
      * 文件保存路径
      */
-    @Value("${file-save-path}")
-    private String fileSavePath;
+    private static String fileSavePath;
+
+    @Value("${file.save-path}")
+    public void setFileSavePath(String path) {
+       this.fileSavePath = path;
+    }
 
     /**
      * 文件访问端口
      */
-    @Value("${file-save-port}")
-    private String port;
+    private static String port;
+
+    @Value("${file.save-port}")
+    public void setPort(String port) {
+       this.port = port;
+    }
 
     public  Object uploadFile(MultipartFile file, HttpServletRequest httpServletRequest) {
 
