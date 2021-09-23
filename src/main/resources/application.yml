@@ -19,9 +19,14 @@ file:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://110.42.250.78:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
-    username: root
-    password: root
+    #url: jdbc:mysql://110.42.250.78:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    #username: root
+    #password: root
+    url: ENC(a8NB+mUQtq1q2z6htj1WQRDfqu/A0HPoa2qSBfXEkQGj2f4Ncv212YiN9YoHfkppH25idAdj3E5bQQsPG0RscwIw+OMpm6qHG2ivuQX/9gXrn3pzpDfdDGC2s/aj9InyjW0fHAQpm0+XiMUZsRUyVhs38i1SoHuxmOB3izsxp7e7oW05FX2Im0ucymeFAttU)
+    username: ENC(hNtZlRJqlvcnqdo5ZDX2LqLNuixg8yccPSHgNvqTa2HFCLzDmIoLo+syxq57LUZR)
+    password: ENC(GPH5ugolEs69jsO83o8TFCqJb6DRZ690UtrAt8WrAFfgEg0dmSiwSZ9cQazzGQew)
+
+
 
   redis:
       database: 0
@@ -48,6 +53,11 @@ mybatis-plus:
 springfox:
   documentation:
     enabled: true
+
+  #配置文件加密
+jasypt:
+  encryptor:
+    password: Y6M9fAJQdU7jNp5MW
 #http:
 #  #最大连接数
 #  maxTotal: 1000
