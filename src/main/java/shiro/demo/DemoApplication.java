@@ -3,12 +3,14 @@ package shiro.demo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * @author lichi
  */
+@EnableScheduling
 @SpringBootApplication
-@MapperScan("shiro.demo.modules.*.mapper")
+@MapperScan("shiro.demo.mapper")
 public class DemoApplication {
 
 	public static void main(String[] args) {
