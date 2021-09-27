@@ -36,7 +36,7 @@ public class SchedulerAllJob {
     public void scheduleJobs() throws SchedulerException {
         Scheduler scheduler = schedulerFactoryBean.getScheduler();
 
-        scheduleJob1(scheduler);
+//        scheduleJob1(scheduler);
 
     }
 

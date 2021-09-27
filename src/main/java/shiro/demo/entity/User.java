@@ -6,7 +6,9 @@ import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import shiro.demo.utils.SFAttributeConverter;
 
+import javax.persistence.Convert;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -25,8 +27,10 @@ public class User {
     @TableId(type = IdType.ASSIGN_ID)
     private Integer id;
 
+    @Convert(converter = SFAttributeConverter.class)
     private String username;
 
+    @Convert(converter = SFAttributeConverter.class)
     private String password;
 
     @TableLogic

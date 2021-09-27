@@ -3,6 +3,7 @@ package shiro.demo.entity;
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
+import javax.persistence.Convert;
 import java.util.Date;
 
 /**
